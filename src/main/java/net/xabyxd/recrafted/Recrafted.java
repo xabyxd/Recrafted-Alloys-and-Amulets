@@ -1,14 +1,14 @@
-package ${package};
+package net.xabyxd.recrafted;
 
 import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = ${mainclass}.MODID, version = ${mainclass}.VERSION)
-public class ${mainclass}
+@Mod(modid = Recrafted.MODID, version = Recrafted.VERSION)
+public class Recrafted
 {
-    public static final String MODID = "${modid}";
+    public static final String MODID = "recrafted";
     public static final String VERSION = "@VERSION@";
 
     @EventHandler

@@ -1,4 +1,4 @@
-package ${package}.mixin;
+package net.xabyxd.recrafted.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Inject;
