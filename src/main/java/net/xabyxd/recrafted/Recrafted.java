@@ -1,20 +1,50 @@
 package net.xabyxd.recrafted;
 
-import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = Recrafted.MODID, version = Recrafted.VERSION)
-public class Recrafted
-{
+@Mod(
+    modid = Recrafted.MODID,
+    version = Recrafted.VERSION,
+    name = "Recrafted",
+    dependencies = "required-after:Forge@[10.13.4.1614]",
+    acceptedMinecraftVersions = "[1.7.10]",
+    acceptableRemoteVersions = Recrafted.VERSION
+)
+
+public class Recrafted {
     public static final String MODID = "recrafted";
     public static final String VERSION = "@VERSION@";
 
+    @SidedProxy(
+        clientSide = "net.xabyxd.recrafted.ClientProxy",
+        serverSide = "net.xabyxd.recrafted.CommonProxy"
+    )
+
+    public static CommonProxy proxy;
+
     @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-        // some example code
-        System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
+    public void preInit(FMLPreInitializationEvent event) {
+        proxy.preInit(event);
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        proxy.init(event);
+    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        proxy.postInit(event);
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event) {
+        proxy.serverStarting(event);
     }
 }
