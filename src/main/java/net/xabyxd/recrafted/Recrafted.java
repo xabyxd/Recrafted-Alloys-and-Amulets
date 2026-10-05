@@ -1,8 +1,5 @@
 package net.xabyxd.recrafted;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -23,8 +20,8 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 public class Recrafted {
 
     public static final String MODID = "recrafted";
+    public static final String MOD_NAME = "Recrafted: Alloys and Amulets";
     public static final String VERSION = "@VERSION@";
-    public static final Logger LOG = LogManager.getLogger(MODID);
 
     @SidedProxy(
         clientSide = "net.xabyxd.recrafted.ClientProxy",

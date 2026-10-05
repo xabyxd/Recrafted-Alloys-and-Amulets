@@ -4,10 +4,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.xabyxd.recrafted.config.Config;
+import net.xabyxd.recrafted.registers.ModItems;
+import net.xabyxd.recrafted.registers.RecipesRegister;
 import net.xabyxd.recrafted.utils.LogHelper;
 
 public class CommonProxy {
@@ -16,24 +15,24 @@ public class CommonProxy {
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration();
-
-        LogHelper.info("I am Recrafted at version " + Recrafted.VERSION);
+        ModItems.init();
+        LogHelper.info(Recrafted.MOD_NAME + " version " + Recrafted.VERSION + " loaded");
+        LogHelper.info("Pre-initialization completed");
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
-    GameRegistry.addRecipe(new ShapedOreRecipe(
-        new ItemStack(ModItems.copperPickaxe),
-        "CCC",
-        " S ",
-        "SSS",
-        'C', "ingotIron",
-        'S', "stickWood"));
+        RecipesRegister.RecipesInit();
+        LogHelper.info("Recipes initialization completed");
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
-    public void postInit(FMLPostInitializationEvent event) {}
+    public void postInit(FMLPostInitializationEvent event) {
+        LogHelper.info("Post-initialization completed");
+    }
 
     // register server commands in this event handler (Remove if not needed)
-    public void serverStarting(FMLServerStartingEvent event) {}
+    public void serverStarting(FMLServerStartingEvent event) {
+        LogHelper.info("Server starting");
+    }
 }

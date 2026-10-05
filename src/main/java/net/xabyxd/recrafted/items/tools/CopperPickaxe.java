@@ -1,4 +1,4 @@
-package net.xabyxd.recrafted.tools;
+package net.xabyxd.recrafted.items.tools;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
