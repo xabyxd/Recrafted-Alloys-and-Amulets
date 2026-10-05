@@ -1,13 +1,13 @@
 [
 {
   "modid": "${modid}",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "name": "Recrafted: Alloys and Amulets",
+  "description": "Small tech mod.",
   "version": "${version}",
   "mcversion": "${minecraft_version}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
+  "authorList": ["xabyxd"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
