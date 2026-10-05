@@ -14,7 +14,17 @@ public class RecipesRegister {
             " S ",
             " S ",
             'C', "ingotCopper",
-            'S', "stickWood")// Recipe placeholder
+            'S', "stickWood")
+        );
+
+        // Copper Axe
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModItems.copperAxe),
+            "CC ",
+            "CS ",
+            " S ",
+            'C', "ingotCopper",
+            'S', "stickWood")
         );
     }
 }

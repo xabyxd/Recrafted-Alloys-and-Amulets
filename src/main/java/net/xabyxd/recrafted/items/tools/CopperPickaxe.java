@@ -1,6 +1,7 @@
 package net.xabyxd.recrafted.items.tools;
 
-import net.minecraft.creativetab.CreativeTabs;
+import static net.xabyxd.recrafted.CommonProxy.*;
+
 import net.minecraft.item.ItemPickaxe;
 import net.xabyxd.recrafted.Recrafted;
 
@@ -10,6 +11,6 @@ public class CopperPickaxe extends ItemPickaxe {
         super(material);
         setUnlocalizedName("copper_pickaxe");
         setTextureName(Recrafted.MODID + ":copper_pickaxe");
-        setCreativeTab(CreativeTabs.tabTools);
+        setCreativeTab(RecraftedTAB);
     }
 }
