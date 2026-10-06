@@ -28,6 +28,35 @@ public class RecipesRegister {
             'S', "stickWood")
         );
 
+        // Copper Sword
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModItems.copperSword),
+            " C ",
+            " S ",
+            " S ",
+            'C', "ingotCopper",
+            'S', "stickWood")
+        );
+
+        // Copper Shovel
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModItems.copperShovel),
+            " C ",
+            " S ",
+            " S ",
+            'C', "ingotCopper",
+            'S', "stickWood")
+        );
+
+        // Copper Hoe
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModItems.copperHoe),
+            "CC ",
+            " S ",
+            " S ",
+            'C', "ingotCopper",
+            'S', "stickWood")
+        );
 
         // Copper Ore -> Copper Ingot
         GameRegistry.addSmelting(ModBlocks.copperOre, new ItemStack(ModItems.copperIngot), 0.7F);

@@ -1,6 +1,11 @@
 itemGroup.recrafted=Recrafted: Aleaciones y Amuletos
 item.copper_pickaxe.name=Pico de Cobre
 item.copper_axe.name=Hacha de Cobre
+item.copper_sword.name=Espada de Cobre
+item.copper_shovel.name=Pala de Cobre
+item.copper_hoe.name=Azada de Cobre
+
 item.copper_ingot.name=Lingote de Cobre
+
 tile.copper_ore.name=Mena de Cobre
 tile.copper_block.name=Bloque de Cobre

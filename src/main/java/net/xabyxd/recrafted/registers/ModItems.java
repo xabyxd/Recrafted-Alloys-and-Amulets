@@ -7,13 +7,19 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import net.xabyxd.recrafted.items.ingots.CopperIngot;
 import net.xabyxd.recrafted.items.tools.CopperAxe;
+import net.xabyxd.recrafted.items.tools.CopperHoe;
 import net.xabyxd.recrafted.items.tools.CopperPickaxe;
+import net.xabyxd.recrafted.items.tools.CopperShovel;
+import net.xabyxd.recrafted.items.tools.CopperSword;
 
 public class ModItems {
 
     public static ToolMaterial COPPER;
     public static Item copperPickaxe;
     public static Item copperAxe;
+    public static Item copperSword;
+    public static Item copperShovel;
+    public static Item copperHoe;
     public static Item copperIngot;
 
     public static void init() {
@@ -23,11 +29,17 @@ public class ModItems {
         // Item builder
         copperPickaxe = new CopperPickaxe(COPPER);
         copperAxe = new CopperAxe(COPPER);
+        copperSword = new CopperSword(COPPER);
+        copperShovel = new CopperShovel(COPPER);
+        copperHoe = new CopperHoe(COPPER);
         copperIngot = new CopperIngot();
 
         // Item registration
         GameRegistry.registerItem(copperPickaxe, "copper_pickaxe");
         GameRegistry.registerItem(copperAxe, "copper_axe");
+        GameRegistry.registerItem(copperSword, "copper_sword");
+        GameRegistry.registerItem(copperShovel, "copper_shovel");
+        GameRegistry.registerItem(copperHoe, "copper_hoe");
         GameRegistry.registerItem(copperIngot, "copper_ingot");
 
         // Ore dictionary registration
