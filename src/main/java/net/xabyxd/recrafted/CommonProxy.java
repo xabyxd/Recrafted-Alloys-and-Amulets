@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.xabyxd.recrafted.config.Config;
+import net.xabyxd.recrafted.registers.ModBlocks;
 import net.xabyxd.recrafted.registers.ModItems;
 import net.xabyxd.recrafted.registers.RecipesRegister;
 import net.xabyxd.recrafted.utils.LogHelper;
@@ -20,6 +21,7 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration();
         ModItems.init();
+        ModBlocks.init();
         LogHelper.info(Recrafted.MOD_NAME + " version " + Recrafted.VERSION + " loaded");
         LogHelper.info("Pre-initialization completed");
     }

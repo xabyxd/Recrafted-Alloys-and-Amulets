@@ -2,3 +2,5 @@ itemGroup.recrafted=Recrafted: Alloys and Amulets
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_axe.name=Copper Axe
 item.copper_ingot.name=Copper Ingot
+tile.copper_ore.name=Copper Ore
+tile.copper_block.name=Block of Copper

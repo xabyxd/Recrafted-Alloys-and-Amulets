@@ -3,6 +3,7 @@ package net.xabyxd.recrafted.registers;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class RecipesRegister {
     
@@ -25,6 +26,25 @@ public class RecipesRegister {
             " S ",
             'C', "ingotCopper",
             'S', "stickWood")
+        );
+
+
+        // Copper Ore -> Copper Ingot
+        GameRegistry.addSmelting(ModBlocks.copperOre, new ItemStack(ModItems.copperIngot), 0.7F);
+
+        // Copper Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModBlocks.copperBlock),
+            "CCC",
+            "CCC",
+            "CCC",
+            'C', "ingotCopper")
+        );
+
+        // Copper Block -> x9 Copper Ingot
+        GameRegistry.addRecipe(new ShapelessOreRecipe(
+            new ItemStack(ModItems.copperIngot, 9),
+            "blockCopper")
         );
     }
 }

@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 import net.xabyxd.recrafted.items.ingots.CopperIngot;
 import net.xabyxd.recrafted.items.tools.CopperAxe;
 import net.xabyxd.recrafted.items.tools.CopperPickaxe;
@@ -28,5 +29,8 @@ public class ModItems {
         GameRegistry.registerItem(copperPickaxe, "copper_pickaxe");
         GameRegistry.registerItem(copperAxe, "copper_axe");
         GameRegistry.registerItem(copperIngot, "copper_ingot");
+
+        // Ore dictionary registration
+        OreDictionary.registerOre("ingotCopper", copperIngot);
     }
 }
