@@ -4,12 +4,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.xabyxd.recrafted.config.Config;
 import net.xabyxd.recrafted.registers.ModBlocks;
 import net.xabyxd.recrafted.registers.ModItems;
 import net.xabyxd.recrafted.registers.RecipesRegister;
 import net.xabyxd.recrafted.utils.LogHelper;
+import net.xabyxd.recrafted.world.OreGenerator;
 
 public class CommonProxy {
 
@@ -30,6 +32,8 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
         RecipesRegister.RecipesInit();
         LogHelper.info("Recipes initialization completed");
+        GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
+        LogHelper.info("World generation initialized");
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)

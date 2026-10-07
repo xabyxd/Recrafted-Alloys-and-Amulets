@@ -58,6 +58,16 @@ public class RecipesRegister {
             'S', "stickWood")
         );
 
+        // Brick Mold
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModItems.brickMold),
+            "PPP",
+            "S S",
+            "PPP",
+            'P', "plankWood",
+            'S', "stickWood")
+        );
+
         // Copper Ore -> Copper Ingot
         GameRegistry.addSmelting(ModBlocks.copperOre, new ItemStack(ModItems.copperIngot), 0.7F);
 

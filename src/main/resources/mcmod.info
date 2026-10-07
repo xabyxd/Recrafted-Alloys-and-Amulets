@@ -1,16 +1,18 @@
 [
-{
-  "modid": "${modid}",
-  "name": "Recrafted: Alloys and Amulets",
-  "description": "Small tech mod.",
-  "version": "${version}",
-  "mcversion": "${minecraft_version}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["xabyxd"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "recrafted-icon.png",
-  "screenshots": [],
-  "dependencies": []
-}
+	{
+		"modid": "${modid}",
+		"name": "Recrafted: Alloys & Amulets",
+		"description": "Small tech mod.",
+		"version": "${version}",
+		"mcversion": "${minecraft_version}",
+		"url": "https://github.com/xabyxd/Recrafted-Alloys-and-Amulets",
+		"updateUrl": "https://github.com/xabyxd/Recrafted-Alloys-and-Amulets/releases",
+		"authorList": [
+			"xabyxd"
+		],
+		"credits": "The Forge and FML guys, for making this mod possible.",
+		"logoFile": "recrafted-logo.png",
+		"screenshots": [],
+		"dependencies": []
+	}
 ]

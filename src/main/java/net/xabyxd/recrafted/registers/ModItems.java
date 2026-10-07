@@ -6,11 +6,12 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import net.xabyxd.recrafted.items.ingots.CopperIngot;
-import net.xabyxd.recrafted.items.tools.CopperAxe;
-import net.xabyxd.recrafted.items.tools.CopperHoe;
-import net.xabyxd.recrafted.items.tools.CopperPickaxe;
-import net.xabyxd.recrafted.items.tools.CopperShovel;
-import net.xabyxd.recrafted.items.tools.CopperSword;
+import net.xabyxd.recrafted.items.tools.copper.CopperAxe;
+import net.xabyxd.recrafted.items.tools.copper.CopperHoe;
+import net.xabyxd.recrafted.items.tools.copper.CopperPickaxe;
+import net.xabyxd.recrafted.items.tools.copper.CopperShovel;
+import net.xabyxd.recrafted.items.tools.copper.CopperSword;
+import net.xabyxd.recrafted.items.tools.wood.BrickMold;
 
 public class ModItems {
 
@@ -21,6 +22,7 @@ public class ModItems {
     public static Item copperShovel;
     public static Item copperHoe;
     public static Item copperIngot;
+    public static Item brickMold;
 
     public static void init() {
         // Tool material builder
@@ -33,6 +35,7 @@ public class ModItems {
         copperShovel = new CopperShovel(COPPER);
         copperHoe = new CopperHoe(COPPER);
         copperIngot = new CopperIngot();
+        brickMold = new BrickMold();
 
         // Item registration
         GameRegistry.registerItem(copperPickaxe, "copper_pickaxe");
@@ -41,6 +44,7 @@ public class ModItems {
         GameRegistry.registerItem(copperShovel, "copper_shovel");
         GameRegistry.registerItem(copperHoe, "copper_hoe");
         GameRegistry.registerItem(copperIngot, "copper_ingot");
+        GameRegistry.registerItem(brickMold, "brick_mold");
 
         // Ore dictionary registration
         OreDictionary.registerOre("ingotCopper", copperIngot);

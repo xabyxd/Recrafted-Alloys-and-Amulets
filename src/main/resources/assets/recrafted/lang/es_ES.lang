@@ -7,5 +7,15 @@ item.copper_hoe.name=Azada de Cobre
 
 item.copper_ingot.name=Lingote de Cobre
 
+item.brick_mold.name=Molde de Ladrillos
+
 tile.copper_ore.name=Mena de Cobre
 tile.copper_block.name=Bloque de Cobre
+
+tooltip.recrafted.copper_pickaxe=
+tooltip.recrafted.copper_axe=
+tooltip.recrafted.copper_sword=
+tooltip.recrafted.copper_shovel=
+tooltip.recrafted.copper_hoe=
+tooltip.recrafted.copper_ingot=
+tooltip.recrafted.brick_mold=

@@ -11,6 +11,7 @@ public class Config {
     public static File configFile = new File(configDir, Recrafted.MODID + ".cfg");
 
     public static String ConfigTest = "Config test.";
+    public static Boolean EnableOreGen = true;
 
     public static void synchronizeConfiguration() {
         if (!configFile.getParentFile().exists()) {
@@ -23,6 +24,13 @@ public class Config {
             Configuration.CATEGORY_GENERAL,
             ConfigTest,
             "How shall I greet?"
+        );
+
+        EnableOreGen = configuration.getBoolean(
+            "EnableOreGen",
+            Configuration.CATEGORY_GENERAL,
+            EnableOreGen,
+            "Should the mod generate Ores in the overworld?"
         );
 
         if (configuration.hasChanged()) {

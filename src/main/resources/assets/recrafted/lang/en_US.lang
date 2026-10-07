@@ -7,5 +7,15 @@ item.copper_hoe.name=Copper Hoe
 
 item.copper_ingot.name=Copper Ingot
 
+item.brick_mold.name=Brick Mold
+
 tile.copper_ore.name=Copper Ore
 tile.copper_block.name=Block of Copper
+
+tooltip.recrafted.copper_pickaxe=A tool made of copper, slightly cheaper than an iron pickaxe.
+tooltip.recrafted.copper_axe=A copper axe. Cheaper than iron, but it wears out sooner.
+tooltip.recrafted.copper_sword=
+tooltip.recrafted.copper_shovel=
+tooltip.recrafted.copper_hoe=
+tooltip.recrafted.copper_ingot=
+tooltip.recrafted.brick_mold=

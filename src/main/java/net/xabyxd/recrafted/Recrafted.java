@@ -11,7 +11,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 @Mod(
     modid = Recrafted.MODID,
     version = Recrafted.VERSION,
-    name = "Recrafted: Alloys and Amulets",
+    name = "Recrafted: Alloys & Amulets",
     dependencies = "required-after:Forge@[10.13.4.1614]",
     acceptedMinecraftVersions = "[1.7.10]",
     acceptableRemoteVersions = Recrafted.VERSION
@@ -20,7 +20,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 public class Recrafted {
 
     public static final String MODID = "recrafted";
-    public static final String MOD_NAME = "Recrafted: Alloys and Amulets";
+    public static final String MOD_NAME = "Recrafted: Alloys & Amulets";
     public static final String VERSION = "@VERSION@";
 
     @SidedProxy(
