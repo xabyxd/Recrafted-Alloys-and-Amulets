@@ -18,7 +18,8 @@ public class OreGenerator implements IWorldGenerator {
         // Only Overworld
         if (world.provider.dimensionId != 0) return;
         //          block                veta         tries     Ymin    Ymax
-        generateOre(ModBlocks.copperOre, 9, 22, 0, 64, world, random, chunkX, chunkZ);
+        generateOre(ModBlocks.copperOre, 5, 13, 0, 64, world, random, chunkX, chunkZ);
+        generateOre(ModBlocks.tinOre, 4, 12, 0, 64, world, random, chunkX, chunkZ);
     }
     
     private void generateOre(Block block, int veinSize, int tries, int minY, int maxY, World world, Random random, int chunkX, int chunkZ) {

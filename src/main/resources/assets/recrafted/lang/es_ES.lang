@@ -6,8 +6,12 @@ item.copper_shovel.name=Pala de Cobre
 item.copper_hoe.name=Azada de Cobre
 
 item.copper_ingot.name=Lingote de Cobre
+item.tin_ingot.name=Lingote de Estaño
+item.bronze_ingot.name=Lingote de Bronce
+item.silver_ingot.name=Lingote de Plata
 
 item.brick_mold.name=Molde de Ladrillos
+item.unfired_clay_brick.name=Ladrillo sin Cocinar
 
 tile.copper_ore.name=Mena de Cobre
 tile.copper_block.name=Bloque de Cobre
@@ -17,5 +21,11 @@ tooltip.recrafted.copper_axe=
 tooltip.recrafted.copper_sword=
 tooltip.recrafted.copper_shovel=
 tooltip.recrafted.copper_hoe=
+
 tooltip.recrafted.copper_ingot=
+tooltip.recrafted.tin_ingot=
+tooltip.recrafted.bronze_ingot=
+tooltip.recrafted.silver_ingot=
+
 tooltip.recrafted.brick_mold=
+tooltip.recrafted.unfired_clay_brick=

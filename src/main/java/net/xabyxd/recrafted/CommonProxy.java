@@ -10,6 +10,7 @@ import net.xabyxd.recrafted.config.Config;
 import net.xabyxd.recrafted.registers.ModBlocks;
 import net.xabyxd.recrafted.registers.ModItems;
 import net.xabyxd.recrafted.registers.RecipesRegister;
+import net.xabyxd.recrafted.registers.RecipesRemover;
 import net.xabyxd.recrafted.utils.LogHelper;
 import net.xabyxd.recrafted.world.OreGenerator;
 
@@ -38,11 +39,12 @@ public class CommonProxy {
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
     public void postInit(FMLPostInitializationEvent event) {
+        RecipesRemover.removeVanillaRecipes();
         LogHelper.info("Post-initialization completed");
     }
 
     // register server commands in this event handler (Remove if not needed)
     public void serverStarting(FMLServerStartingEvent event) {
-        LogHelper.info("Server starting");
+        LogHelper.info("Server started");
     }
 }

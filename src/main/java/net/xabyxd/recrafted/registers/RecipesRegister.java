@@ -1,7 +1,9 @@
 package net.xabyxd.recrafted.registers;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
@@ -67,6 +69,26 @@ public class RecipesRegister {
             'P', "plankWood",
             'S', "stickWood")
         );
+
+        // Unfired Clay Brick
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(ModItems.unfiredClayBrick, 8),
+            "CCC",
+            "CSC",
+            "CCC",
+            'C', Items.clay_ball,
+            'S', new ItemStack(ModItems.brickMold, 1, OreDictionary.WILDCARD_VALUE))
+        );
+
+        // Shapeless Unfired Clay Brick
+        GameRegistry.addRecipe(new ShapelessOreRecipe(
+            new ItemStack(ModItems.unfiredClayBrick, 1),
+            new ItemStack(ModItems.brickMold, 1, OreDictionary.WILDCARD_VALUE),
+            Items.clay_ball
+        ));
+
+        // Unfired Clay Brick -> x1 Brick
+        GameRegistry.addSmelting(ModItems.unfiredClayBrick, new ItemStack(Items.brick), 0.7F);
 
         // Copper Ore -> Copper Ingot
         GameRegistry.addSmelting(ModBlocks.copperOre, new ItemStack(ModItems.copperIngot), 0.7F);

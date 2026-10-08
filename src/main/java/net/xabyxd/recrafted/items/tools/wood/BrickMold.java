@@ -34,6 +34,11 @@ public class BrickMold extends Item {
     }
 
     @Override
+    public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack) {
+        return false;
+    }
+
+    @Override
     @SuppressWarnings ({ "rawtypes", "unchecked" })
     public void addInformation(ItemStack itemStack, EntityPlayer player, List tooltip, boolean advanced) {
         tooltip.add(StatCollector.translateToLocal("tooltip.recrafted.brick_mold"));
