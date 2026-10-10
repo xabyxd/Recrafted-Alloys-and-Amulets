@@ -12,7 +12,11 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
     modid = Recrafted.MODID,
     version = Recrafted.VERSION,
     name = "Recrafted: Alloys & Amulets",
-    dependencies = "required-after:Forge@[10.13.4.1614]",
+    dependencies = "required-after:Forge@[10.13.4.1614];"
+                + "after:IC2;"
+                + "after:Baubles;"
+                + "after:Thaumcraft;"
+                + "after:NotEnoughItems",
     acceptedMinecraftVersions = "[1.7.10]",
     acceptableRemoteVersions = Recrafted.VERSION
 )

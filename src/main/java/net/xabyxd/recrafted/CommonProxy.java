@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
+import net.xabyxd.recrafted.compat.Compat;
 import net.xabyxd.recrafted.config.Config;
 import net.xabyxd.recrafted.registers.ModBlocks;
 import net.xabyxd.recrafted.registers.ModItems;
@@ -22,6 +23,8 @@ public class CommonProxy {
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
+        //KeyHandler.init();
+        Compat.init();
         Config.synchronizeConfiguration();
         ModItems.init();
         ModBlocks.init();

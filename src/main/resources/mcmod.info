@@ -13,6 +13,12 @@
 		"credits": "The Forge and FML guys, for making this mod possible.",
 		"logoFile": "recrafted-logo.png",
 		"screenshots": [],
-		"dependencies": []
+		"useDependencyInformation": true,
+		"dependencies": [
+			"IC2",
+			"Baubles",
+			"Thaumcraft",
+			"NotEnoughItems"
+		]
 	}
 ]

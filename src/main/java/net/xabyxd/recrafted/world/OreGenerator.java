@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.xabyxd.recrafted.compat.Compat;
 import net.xabyxd.recrafted.config.Config;
 import net.xabyxd.recrafted.registers.ModBlocks;
 
@@ -15,6 +16,7 @@ public class OreGenerator implements IWorldGenerator {
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
         if (!Config.EnableOreGen) return;
+        if (Compat.IC2Loaded) return;
         // Only Overworld
         if (world.provider.dimensionId != 0) return;
         //          block                veta         tries     Ymin    Ymax
