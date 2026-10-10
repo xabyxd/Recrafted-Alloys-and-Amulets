@@ -87,6 +87,7 @@ public class RecipesRegister {
             Items.clay_ball
         ));
 
+        // Registered in NEIRecipes.defineAll() too
         // Unfired Clay Brick -> x1 Brick
         GameRegistry.addSmelting(ModItems.unfiredClayBrick, new ItemStack(Items.brick), 0.7F);
 

@@ -1,50 +1,47 @@
 package net.xabyxd.recrafted.registers;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.item.crafting.IRecipe;
+import net.xabyxd.recrafted.compat.nei.NEIRecipes;
+import net.xabyxd.recrafted.utils.LogHelper;
 
 public class RecipesRemover {
 
     private RecipesRemover() {}
 
-    @SuppressWarnings("unchecked")
-    public static void removeVanillaRecipes() {
-        // Furnace => deletes all smelting recipes that inputs clay balls
-        Map<ItemStack, ItemStack> smelting = FurnaceRecipes.smelting().getSmeltingList();
-        Iterator<Map.Entry<ItemStack, ItemStack>> smeltingIt = smelting.entrySet().iterator();
-        while (smeltingIt.hasNext()) {
-            ItemStack input = smeltingIt.next().getKey();
-            if (input != null && input.getItem() == Items.clay_ball) {
-                smeltingIt.remove();
-            }
-        }
-
-        /* EXAMPLE CODE
-        @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked") // FIXED: NEI hidden recipes are now defined in NEIRrecipes and they are manually added there. (Server-Side issue)
         public static void removeVanillaRecipes() {
-        // Furnace => deletes all smelting recipes that output brick
+        NEIRecipes.defineAll();
+
+        // ADDED: Furnace recipes can now be deleted and hidden from NEI
         Map<ItemStack, ItemStack> smelting = FurnaceRecipes.smelting().getSmeltingList();
         Iterator<Map.Entry<ItemStack, ItemStack>> smeltingIt = smelting.entrySet().iterator();
         while (smeltingIt.hasNext()) {
-            ItemStack output = smeltingIt.next().getValue();
-            if (output != null && output.getItem() == Items.brick) {
+            if (NEIRecipes.isSmeltingInputHidden(smeltingIt.next().getKey())) {
                 smeltingIt.remove();
             }
         }
 
-        // Crafting table => deletes all recipes that output stone pickaxe
-        List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
+        // ADDED: Crafting table recipes can now be deleted and hidden from NEI
+        List<IRecipe> recipes = (List<IRecipe>) CraftingManager.getInstance().getRecipeList();
+        int before = recipes.size();
         Iterator<IRecipe> recipeIt = recipes.iterator();
         while (recipeIt.hasNext()) {
-            ItemStack output = recipeIt.next().getRecipeOutput();
-            if (output != null && output.getItem() == Items.stone_pickaxe) {
-                recipeIt.remove();
+            IRecipe recipe = recipeIt.next();
+            try {
+                if (NEIRecipes.isCraftingOutputHidden(recipe.getRecipeOutput())) {
+                    recipeIt.remove();
+                }
+            } catch (Exception e) {
+                LogHelper.warn("Skipping recipe " + recipe.getClass().getName(), e);
             }
         }
-        */
+        LogHelper.info("Crafting recipes: {} -> {}", before, recipes.size());
     }
 }

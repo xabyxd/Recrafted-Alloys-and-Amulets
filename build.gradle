@@ -25,10 +25,26 @@ plugins {
     id 'maven-publish'
 }
 
-if(project.enable_lombok.toBoolean()) {
+// Repositories for the project dependencies (the ones in buildscript{} only serve the Gradle plugin).
+// If buildscript/forge-1.7.gradle already declares them, these are harmless duplicates.
+repositories {
+    maven { url = "https://jitpack.io" }
+    maven { url = "https://nexus.gtnewhorizons.com/repository/public/" }
+}
+
+if (project.enable_lombok.toBoolean()) {
     dependencies {
         compileOnly 'org.projectlombok:lombok:1.18.4'
     }
+}
+
+// Compile-time only: NEI and CodeChickenCore are provided at runtime by the game / modpack.
+// Use the same NEI version as the jar in your mods folder.
+dependencies {
+    compileOnly('com.github.GTNewHorizons:NotEnoughItems:2.8.44-GTNH:dev') {
+        transitive = false
+    }
+    compileOnly 'com.github.GTNewHorizons:CodeChickenCore:1.4.21:dev'
 }
 
 apply from: "buildscript/forge-1.7.gradle"
