@@ -17,7 +17,7 @@ import net.xabyxd.recrafted.items.tools.copper.CopperShovel;
 import net.xabyxd.recrafted.items.tools.copper.CopperSword;
 import net.xabyxd.recrafted.items.tools.wood.BrickMold;
 
-public class ModItems {
+public class RecraftedItems {
 
     // Tool materials registration
     public static ToolMaterial COPPER;

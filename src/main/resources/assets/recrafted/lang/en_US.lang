@@ -14,18 +14,27 @@ item.brick_mold.name=Brick Mold
 item.unfired_clay_brick.name=Unfired Clay Brick
 
 tile.copper_ore.name=Copper Ore
+tile.tin_ore.name=Tin Ore
 tile.copper_block.name=Block of Copper
+tile.tin_block.name=Block of Tin
 
 tooltip.recrafted.copper_pickaxe=A tool made of copper, slightly cheaper than an iron pickaxe.
 tooltip.recrafted.copper_axe=A copper axe. Cheaper than iron, but it wears out sooner.
-tooltip.recrafted.copper_sword=
-tooltip.recrafted.copper_shovel=
-tooltip.recrafted.copper_hoe=
+tooltip.recrafted.copper_sword=A copper sword. Cuts well, but doesn't hold up like iron.
+tooltip.recrafted.copper_shovel=A copper shovel. Digs fast, but wears out sooner than iron.
+tooltip.recrafted.copper_hoe=A copper hoe. Good enough for tilling soil.
 
-tooltip.recrafted.copper_ingot=
-tooltip.recrafted.tin_ingot=
-tooltip.recrafted.bronze_ingot=
-tooltip.recrafted.silver_ingot=
+tooltip.recrafted.vigor_amulet=
+tooltip.recrafted.miner_amulet=
 
-tooltip.recrafted.brick_mold=
-tooltip.recrafted.unfired_clay_brick=
+tooltip.recrafted.copper_ingot=A soft, reddish metal. Useful for tools and alloys.
+tooltip.recrafted.tin_ingot=A soft, silvery metal. Rarely used alone, but essential for bronze.
+tooltip.recrafted.bronze_ingot=An alloy of copper and tin. Tougher than either metal alone.
+tooltip.recrafted.silver_ingot=A bright, lustrous metal. Highly conductive and prized by smiths.
+tooltip.recrafted.steel_ingot=Tougher and longer-lasting than iron. Hard, durable and reliable.
+tooltip.recrafted.ruby_gem=A fiery gem. Cuts fast and hits hard.
+tooltip.recrafted.sapphire_gem=A deep blue gem. Sharp, smooth and surprisingly durable.
+tooltip.recrafted.peridot_gem=A green gem. Light in the hand and quick to work.
+
+tooltip.recrafted.brick_mold=Used to shape clay into bricks.
+tooltip.recrafted.unfired_clay_brick=Shaped clay, still soft. Needs to be fired in a furnace.

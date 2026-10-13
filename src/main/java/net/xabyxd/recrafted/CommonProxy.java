@@ -8,10 +8,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.xabyxd.recrafted.compat.Compat;
 import net.xabyxd.recrafted.config.Config;
-import net.xabyxd.recrafted.registers.ModBlocks;
-import net.xabyxd.recrafted.registers.ModItems;
 import net.xabyxd.recrafted.registers.RecipesRegister;
 import net.xabyxd.recrafted.registers.RecipesRemover;
+import net.xabyxd.recrafted.registers.RecraftedBlocks;
+import net.xabyxd.recrafted.registers.RecraftedItems;
 import net.xabyxd.recrafted.utils.LogHelper;
 import net.xabyxd.recrafted.world.OreGenerator;
 
@@ -26,8 +26,8 @@ public class CommonProxy {
         //KeyHandler.init();
         Compat.init();
         Config.synchronizeConfiguration();
-        ModItems.init();
-        ModBlocks.init();
+        RecraftedItems.init();
+        RecraftedBlocks.init();
         LogHelper.info(Recrafted.MOD_NAME + " version " + Recrafted.VERSION + " loaded");
         LogHelper.info("Pre-initialization completed");
     }

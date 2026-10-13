@@ -9,7 +9,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.xabyxd.recrafted.compat.Compat;
 import net.xabyxd.recrafted.config.Config;
-import net.xabyxd.recrafted.registers.ModBlocks;
+import net.xabyxd.recrafted.registers.RecraftedBlocks;
 
 public class OreGenerator implements IWorldGenerator {
 
@@ -20,8 +20,8 @@ public class OreGenerator implements IWorldGenerator {
         // Only Overworld
         if (world.provider.dimensionId != 0) return;
         //          block                veta         tries     Ymin    Ymax
-        generateOre(ModBlocks.copperOre, 5, 13, 0, 64, world, random, chunkX, chunkZ);
-        generateOre(ModBlocks.tinOre, 4, 12, 0, 64, world, random, chunkX, chunkZ);
+        generateOre(RecraftedBlocks.copperOre, 5, 13, 0, 64, world, random, chunkX, chunkZ);
+        generateOre(RecraftedBlocks.tinOre, 4, 12, 0, 64, world, random, chunkX, chunkZ);
     }
     
     private void generateOre(Block block, int veinSize, int tries, int minY, int maxY, World world, Random random, int chunkX, int chunkZ) {

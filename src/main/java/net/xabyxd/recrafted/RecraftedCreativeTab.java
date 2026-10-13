@@ -2,7 +2,7 @@ package net.xabyxd.recrafted;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.xabyxd.recrafted.registers.ModItems;
+import net.xabyxd.recrafted.registers.RecraftedItems;
 
 public class RecraftedCreativeTab extends CreativeTabs {
 
@@ -12,6 +12,6 @@ public class RecraftedCreativeTab extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return ModItems.copperPickaxe;
+        return RecraftedItems.copperPickaxe;
     }
 }

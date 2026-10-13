@@ -7,7 +7,7 @@ import java.util.List;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.xabyxd.recrafted.registers.ModItems;
+import net.xabyxd.recrafted.registers.RecraftedItems;
 
 /** Single place to declare which furnace recipes NEI hides and which ones it must show. No NEI imports on purpose. */
 public final class NEIRecipes {
@@ -60,7 +60,7 @@ public final class NEIRecipes {
         hideSmeltingInput(Items.clay_ball);
 
         // Unfired clay brick -> brick
-        addSmelting(ModItems.unfiredClayBrick, new ItemStack(Items.brick));
+        addSmelting(RecraftedItems.unfiredClayBrick, new ItemStack(Items.brick));
 
         // Crafting table: vanilla stone tools are no longer craftable (TESTING)
         hideCraftingOutput(Items.stone_pickaxe);

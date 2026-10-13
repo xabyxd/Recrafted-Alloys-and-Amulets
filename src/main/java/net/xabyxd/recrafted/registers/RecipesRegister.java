@@ -12,7 +12,7 @@ public class RecipesRegister {
     public static void RecipesInit() {
         // Copper Pickaxe
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.copperPickaxe),
+            new ItemStack(RecraftedItems.copperPickaxe),
             "CCC",
             " S ",
             " S ",
@@ -22,7 +22,7 @@ public class RecipesRegister {
 
         // Copper Axe
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.copperAxe),
+            new ItemStack(RecraftedItems.copperAxe),
             "CC ",
             "CS ",
             " S ",
@@ -32,7 +32,7 @@ public class RecipesRegister {
 
         // Copper Sword
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.copperSword),
+            new ItemStack(RecraftedItems.copperSword),
             " C ",
             " S ",
             " S ",
@@ -42,7 +42,7 @@ public class RecipesRegister {
 
         // Copper Shovel
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.copperShovel),
+            new ItemStack(RecraftedItems.copperShovel),
             " C ",
             " S ",
             " S ",
@@ -52,7 +52,7 @@ public class RecipesRegister {
 
         // Copper Hoe
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.copperHoe),
+            new ItemStack(RecraftedItems.copperHoe),
             "CC ",
             " S ",
             " S ",
@@ -62,7 +62,7 @@ public class RecipesRegister {
 
         // Brick Mold
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.brickMold),
+            new ItemStack(RecraftedItems.brickMold),
             "PPP",
             "S S",
             "PPP",
@@ -72,31 +72,31 @@ public class RecipesRegister {
 
         // Unfired Clay Brick
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModItems.unfiredClayBrick, 8),
+            new ItemStack(RecraftedItems.unfiredClayBrick, 8),
             "CCC",
             "CSC",
             "CCC",
             'C', Items.clay_ball,
-            'S', new ItemStack(ModItems.brickMold, 1, OreDictionary.WILDCARD_VALUE))
+            'S', new ItemStack(RecraftedItems.brickMold, 1, OreDictionary.WILDCARD_VALUE))
         );
 
         // Shapeless Unfired Clay Brick
         GameRegistry.addRecipe(new ShapelessOreRecipe(
-            new ItemStack(ModItems.unfiredClayBrick, 1),
-            new ItemStack(ModItems.brickMold, 1, OreDictionary.WILDCARD_VALUE),
+            new ItemStack(RecraftedItems.unfiredClayBrick, 1),
+            new ItemStack(RecraftedItems.brickMold, 1, OreDictionary.WILDCARD_VALUE),
             Items.clay_ball
         ));
 
         // Registered in NEIRecipes.defineAll() too
         // Unfired Clay Brick -> x1 Brick
-        GameRegistry.addSmelting(ModItems.unfiredClayBrick, new ItemStack(Items.brick), 0.7F);
+        GameRegistry.addSmelting(RecraftedItems.unfiredClayBrick, new ItemStack(Items.brick), 0.7F);
 
         // Copper Ore -> Copper Ingot
-        GameRegistry.addSmelting(ModBlocks.copperOre, new ItemStack(ModItems.copperIngot), 0.7F);
+        GameRegistry.addSmelting(RecraftedBlocks.copperOre, new ItemStack(RecraftedItems.copperIngot), 0.7F);
 
         // Copper Block
         GameRegistry.addRecipe(new ShapedOreRecipe(
-            new ItemStack(ModBlocks.copperBlock),
+            new ItemStack(RecraftedBlocks.copperBlock),
             "CCC",
             "CCC",
             "CCC",
@@ -105,7 +105,7 @@ public class RecipesRegister {
 
         // Copper Block -> x9 Copper Ingot
         GameRegistry.addRecipe(new ShapelessOreRecipe(
-            new ItemStack(ModItems.copperIngot, 9),
+            new ItemStack(RecraftedItems.copperIngot, 9),
             "blockCopper")
         );
     }
