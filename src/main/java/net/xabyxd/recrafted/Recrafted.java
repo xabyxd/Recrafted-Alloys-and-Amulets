@@ -25,6 +25,7 @@ public class Recrafted {
 
     public static final String MODID = "recrafted";
     public static final String MOD_NAME = "Recrafted: Alloys & Amulets";
+    public static final String SHORT_MOD_NAME = "Recrafted";
     public static final String VERSION = "@VERSION@";
 
     @SidedProxy(

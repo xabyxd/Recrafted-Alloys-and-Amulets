@@ -1,17 +1,20 @@
 package net.xabyxd.recrafted.compat;
 
 import cpw.mods.fml.common.Loader;
+import net.xabyxd.recrafted.Recrafted;
 import net.xabyxd.recrafted.utils.LogHelper;
 
 public final class Compat {
 
     // Mod IDs
     private static final String NEI_ID = "NotEnoughItems";
+    private static final String WAILA_ID = "wawla";
     private static final String IC2_ID = "IC2";
     private static final String BAUBLES_ID = "Baubles";
     private static final String THAUMCRAFT_ID = "Thaumcraft";
 
     public static boolean NEILoaded = false;
+    public static boolean WailaLoaded = false;
     public static boolean IC2Loaded = false;
     public static boolean BaublesLoaded = false;
     public static boolean ThaumcraftLoaded = false;
@@ -21,6 +24,9 @@ public final class Compat {
     public static void init() {
         // Todo Think about what can be integrated with NEI
         NEILoaded = detect(NEI_ID, "NEI found.");
+
+        // Todo Think about what can be integrated with Waila
+        WailaLoaded = detect(WAILA_ID, "Waila found.");
 
         // Todo Think about what more to integrate with IC2
         IC2Loaded = detect(IC2_ID, "IC2 found. Recrafted ore generation disabled.");
@@ -36,6 +42,8 @@ public final class Compat {
         boolean loaded = Loader.isModLoaded(modId);
         if (loaded) {
             LogHelper.info(foundMessage);
+        } else {
+            LogHelper.info("[" + Recrafted.SHORT_MOD_NAME + "] Mod " + modId + " is missing! Some features will be disabled.");
         }
         return loaded;
     }

@@ -34,7 +34,7 @@ public class RecipesRegister {
         GameRegistry.addRecipe(new ShapedOreRecipe(
             new ItemStack(RecraftedItems.copperSword),
             " C ",
-            " S ",
+            " C ",
             " S ",
             'C', "ingotCopper",
             'S', "stickWood")
@@ -94,6 +94,15 @@ public class RecipesRegister {
         // Copper Ore -> Copper Ingot
         GameRegistry.addSmelting(RecraftedBlocks.copperOre, new ItemStack(RecraftedItems.copperIngot), 0.7F);
 
+        // Tin Ore -> Tin Ingot
+        GameRegistry.addSmelting(RecraftedBlocks.tinOre, new ItemStack(RecraftedItems.tinIngot), 0.7F);
+
+        // Silver Ore -> Silver Ingot
+        GameRegistry.addSmelting(RecraftedBlocks.silverOre, new ItemStack(RecraftedItems.silverIngot), 0.7F);
+
+        // Lead Ore -> Lead Ingot
+        GameRegistry.addSmelting(RecraftedBlocks.leadOre, new ItemStack(RecraftedItems.leadIngot), 0.7F);
+
         // Copper Block
         GameRegistry.addRecipe(new ShapedOreRecipe(
             new ItemStack(RecraftedBlocks.copperBlock),
@@ -102,6 +111,57 @@ public class RecipesRegister {
             "CCC",
             'C', "ingotCopper")
         );
+
+        // Tin Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(RecraftedBlocks.tinBlock),
+            "SSS",
+            "SSS",
+            "SSS",
+            'S', "ingotTin")
+        );
+
+        // Bronze Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(RecraftedBlocks.bronzeBlock),
+            "SSS",
+            "SSS",
+            "SSS",
+            'S', "ingotBronze")
+        );
+
+        // Silver Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(RecraftedBlocks.silverBlock),
+            "SSS",
+            "SSS",
+            "SSS",
+            'S', "ingotSilver")
+        );
+
+        // Lead Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(RecraftedBlocks.leadBlock),
+            "SSS",
+            "SSS",
+            "SSS",
+            'S', "ingotLead")
+        );
+
+        // Steel Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(
+            new ItemStack(RecraftedBlocks.steelBlock),
+            "SSS",
+            "SSS",
+            "SSS",
+            'S', "ingotSteel")
+        );
+
+        // x3 Copper Ingot + x1 Tin Ingot = x4 Bronze Ingot
+        GameRegistry.addRecipe(new ShapelessOreRecipe(
+            new ItemStack(RecraftedItems.bronzeIngot, 4),
+            "ingotCopper", "ingotCopper", "ingotCopper", "ingotTin"
+        ));
 
         // Copper Block -> x9 Copper Ingot
         GameRegistry.addRecipe(new ShapelessOreRecipe(

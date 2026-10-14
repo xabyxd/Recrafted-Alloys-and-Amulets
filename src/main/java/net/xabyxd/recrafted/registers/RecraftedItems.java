@@ -8,8 +8,16 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.xabyxd.recrafted.items.bricks.UnfiredClayBrick;
 import net.xabyxd.recrafted.items.ingots.BronzeIngot;
 import net.xabyxd.recrafted.items.ingots.CopperIngot;
+import net.xabyxd.recrafted.items.ingots.LeadIngot;
 import net.xabyxd.recrafted.items.ingots.SilverIngot;
+import net.xabyxd.recrafted.items.ingots.SteelIngot;
 import net.xabyxd.recrafted.items.ingots.TinIngot;
+import net.xabyxd.recrafted.items.nuggets.BronzeNugget;
+import net.xabyxd.recrafted.items.nuggets.CopperNugget;
+import net.xabyxd.recrafted.items.nuggets.LeadNugget;
+import net.xabyxd.recrafted.items.nuggets.SilverNugget;
+import net.xabyxd.recrafted.items.nuggets.SteelNugget;
+import net.xabyxd.recrafted.items.nuggets.TinNugget;
 import net.xabyxd.recrafted.items.tools.copper.CopperAxe;
 import net.xabyxd.recrafted.items.tools.copper.CopperHoe;
 import net.xabyxd.recrafted.items.tools.copper.CopperPickaxe;
@@ -25,18 +33,28 @@ public class RecraftedItems {
     public static ToolMaterial BRONZE;
     public static ToolMaterial SILVER;
 
+    // Ingot registration
+    public static Item copperIngot;
+    public static Item tinIngot;
+    public static Item bronzeIngot;
+    public static Item silverIngot;
+    public static Item leadIngot;
+    public static Item steelIngot;
+
+    // Nugget registration
+    public static Item copperNugget;
+    public static Item tinNugget;
+    public static Item bronzeNugget;
+    public static Item silverNugget;
+    public static Item leadNugget;
+    public static Item steelNugget;
+
     // Tool registration
     public static Item copperPickaxe;
     public static Item copperAxe;
     public static Item copperSword;
     public static Item copperShovel;
     public static Item copperHoe;
-
-    // Ingot registration
-    public static Item copperIngot;
-    public static Item tinIngot;
-    public static Item bronzeIngot;
-    public static Item silverIngot;
 
     // Item registration
     public static Item brickMold;
@@ -61,6 +79,16 @@ public class RecraftedItems {
         tinIngot = new TinIngot();
         bronzeIngot = new BronzeIngot();
         silverIngot = new SilverIngot();
+        leadIngot = new LeadIngot();
+        steelIngot = new SteelIngot();
+
+        // Nuggets builder
+        copperNugget = new CopperNugget();
+        tinNugget = new TinNugget();
+        bronzeNugget = new BronzeNugget();
+        silverNugget = new SilverNugget();
+        leadNugget = new LeadNugget();
+        steelNugget = new SteelNugget();
 
         // Item builder
         brickMold = new BrickMold();
@@ -78,7 +106,17 @@ public class RecraftedItems {
         GameRegistry.registerItem(tinIngot, "tin_ingot");
         GameRegistry.registerItem(bronzeIngot, "bronze_ingot");
         GameRegistry.registerItem(silverIngot, "silver_ingot");
-        
+        GameRegistry.registerItem(leadIngot, "lead_ingot");
+        GameRegistry.registerItem(steelIngot, "steel_ingot");
+
+        // Nugget registration
+        GameRegistry.registerItem(copperNugget, "copper_nugget");
+        GameRegistry.registerItem(tinNugget, "tin_nugget");
+        GameRegistry.registerItem(bronzeNugget, "bronze_nugget");
+        GameRegistry.registerItem(silverNugget, "silver_nugget");
+        GameRegistry.registerItem(leadNugget, "lead_nugget");
+        GameRegistry.registerItem(steelNugget, "steel_nugget");
+
         // Item registration
         GameRegistry.registerItem(brickMold, "brick_mold");
         GameRegistry.registerItem(unfiredClayBrick, "unfired_clay_brick");
@@ -88,5 +126,14 @@ public class RecraftedItems {
         OreDictionary.registerOre("ingotTin", tinIngot);
         OreDictionary.registerOre("ingotBronze", bronzeIngot);
         OreDictionary.registerOre("ingotSilver", silverIngot);
+        OreDictionary.registerOre("ingotLead", leadIngot);
+        OreDictionary.registerOre("ingotSteel", steelIngot);
+
+        OreDictionary.registerOre("nuggetCopper", copperNugget);
+        OreDictionary.registerOre("nuggetTin", tinNugget);
+        OreDictionary.registerOre("nuggetBronze", bronzeNugget);
+        OreDictionary.registerOre("nuggetSilver", silverNugget);
+        OreDictionary.registerOre("nuggetLead", leadNugget);
+        OreDictionary.registerOre("nuggetSteel", steelNugget);
     }
 }

@@ -10,9 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.xabyxd.recrafted.Recrafted;
 
-public class vigorAmulet extends Item {
+public class VigorAmulet extends Item {
     
-    public vigorAmulet() {
+    public VigorAmulet() {
         setUnlocalizedName("vigor_amulet");
         setTextureName(Recrafted.MODID + ":vigor_amulet");
         setCreativeTab(RecraftedTAB);

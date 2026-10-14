@@ -10,9 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.xabyxd.recrafted.Recrafted;
 
-public class minerAmulet extends Item {
+public class MinerAmulet extends Item {
     
-    public minerAmulet() {
+    public MinerAmulet() {
         setUnlocalizedName("miner_amulet");
         setTextureName(Recrafted.MODID + ":miner_amulet");
         setCreativeTab(RecraftedTAB);

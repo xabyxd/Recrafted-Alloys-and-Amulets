@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -46,7 +47,16 @@ public final class NEIRecipes {
         addSmelting(new ItemStack(input), output);
     }
 
+    /** Makes NEI show input -> output in the furnace tab if the live furnace list doesn't already have it. */
+    public static void addSmeltingBlock(Block input, ItemStack output) {
+        addSmelting(new ItemStack(input), output);
+    }
+
     public static void addSmelting(ItemStack input, ItemStack output) {
+        EXTRA_SMELTING.add(new SmeltingEntry(input.copy(), output.copy()));
+    }
+
+    public static void addSmeltingBlock(ItemStack input, ItemStack output) {
         EXTRA_SMELTING.add(new SmeltingEntry(input.copy(), output.copy()));
     }
 
@@ -61,6 +71,8 @@ public final class NEIRecipes {
 
         // Unfired clay brick -> brick
         addSmelting(RecraftedItems.unfiredClayBrick, new ItemStack(Items.brick));
+
+        // TODO: Future custom recipe handler for custom machines from Recrafted
 
         // Crafting table: vanilla stone tools are no longer craftable (TESTING)
         hideCraftingOutput(Items.stone_pickaxe);

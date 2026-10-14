@@ -40,6 +40,7 @@ public class GuiCompatStatus extends GuiScreen {
 
     public GuiCompatStatus() {
         integrations.add(new Entry("NEI", "NotEnoughItems", Compat.NEILoaded));
+        integrations.add(new Entry("Waila", "Waila", Compat.WailaLoaded));
         integrations.add(new Entry("IC2", "IC2", Compat.IC2Loaded));
         integrations.add(new Entry("Baubles", "Baubles", Compat.BaublesLoaded));
         integrations.add(new Entry("Thaumcraft", "Thaumcraft", Compat.ThaumcraftLoaded));
