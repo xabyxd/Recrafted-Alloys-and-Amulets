@@ -5,7 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
+import net.xabyxd.recrafted.items.bricks.CokeOvenBrick;
 import net.xabyxd.recrafted.items.bricks.UnfiredClayBrick;
+import net.xabyxd.recrafted.items.bricks.UnfiredCokeOvenBrick;
+import net.xabyxd.recrafted.items.fuels.CoalCoke;
 import net.xabyxd.recrafted.items.ingots.BronzeIngot;
 import net.xabyxd.recrafted.items.ingots.CopperIngot;
 import net.xabyxd.recrafted.items.ingots.LeadIngot;
@@ -14,6 +17,7 @@ import net.xabyxd.recrafted.items.ingots.SteelIngot;
 import net.xabyxd.recrafted.items.ingots.TinIngot;
 import net.xabyxd.recrafted.items.nuggets.BronzeNugget;
 import net.xabyxd.recrafted.items.nuggets.CopperNugget;
+import net.xabyxd.recrafted.items.nuggets.IronNugget;
 import net.xabyxd.recrafted.items.nuggets.LeadNugget;
 import net.xabyxd.recrafted.items.nuggets.SilverNugget;
 import net.xabyxd.recrafted.items.nuggets.SteelNugget;
@@ -42,6 +46,7 @@ public class RecraftedItems {
     public static Item steelIngot;
 
     // Nugget registration
+    public static Item ironNugget;
     public static Item copperNugget;
     public static Item tinNugget;
     public static Item bronzeNugget;
@@ -59,6 +64,9 @@ public class RecraftedItems {
     // Item registration
     public static Item brickMold;
     public static Item unfiredClayBrick;
+    public static Item unfiredCokeOvenBrick;
+    public static Item cokeOvenBrick;
+    public static Item coalCoke;
 
     public static void init() {
         // Tool material builder
@@ -83,6 +91,7 @@ public class RecraftedItems {
         steelIngot = new SteelIngot();
 
         // Nuggets builder
+        ironNugget = new IronNugget();
         copperNugget = new CopperNugget();
         tinNugget = new TinNugget();
         bronzeNugget = new BronzeNugget();
@@ -93,6 +102,9 @@ public class RecraftedItems {
         // Item builder
         brickMold = new BrickMold();
         unfiredClayBrick = new UnfiredClayBrick();
+        unfiredCokeOvenBrick = new UnfiredCokeOvenBrick();
+        cokeOvenBrick = new CokeOvenBrick();
+        coalCoke = new CoalCoke();
 
         // Tool registration
         GameRegistry.registerItem(copperPickaxe, "copper_pickaxe");
@@ -110,6 +122,7 @@ public class RecraftedItems {
         GameRegistry.registerItem(steelIngot, "steel_ingot");
 
         // Nugget registration
+        GameRegistry.registerItem(ironNugget, "iron_nugget");
         GameRegistry.registerItem(copperNugget, "copper_nugget");
         GameRegistry.registerItem(tinNugget, "tin_nugget");
         GameRegistry.registerItem(bronzeNugget, "bronze_nugget");
@@ -120,6 +133,9 @@ public class RecraftedItems {
         // Item registration
         GameRegistry.registerItem(brickMold, "brick_mold");
         GameRegistry.registerItem(unfiredClayBrick, "unfired_clay_brick");
+        GameRegistry.registerItem(unfiredCokeOvenBrick, "unfired_coke_oven_brick");
+        GameRegistry.registerItem(cokeOvenBrick, "coke_oven_brick");
+        GameRegistry.registerItem(coalCoke, "coal_coke");
 
         // Ore dictionary registration
         OreDictionary.registerOre("ingotCopper", copperIngot);
@@ -129,6 +145,7 @@ public class RecraftedItems {
         OreDictionary.registerOre("ingotLead", leadIngot);
         OreDictionary.registerOre("ingotSteel", steelIngot);
 
+        OreDictionary.registerOre("nuggetIron", ironNugget);
         OreDictionary.registerOre("nuggetCopper", copperNugget);
         OreDictionary.registerOre("nuggetTin", tinNugget);
         OreDictionary.registerOre("nuggetBronze", bronzeNugget);

@@ -15,6 +15,7 @@ item.silver_ingot.name=Silver Ingot
 item.lead_ingot.name=Lead Ingot
 item.steel_ingot.name=Steel Ingot
 
+item.iron_nugget.name=Iron Nugget
 item.copper_nugget.name=Copper Nugget
 item.tin_nugget.name=Tin Nugget
 item.bronze_nugget.name=Bronze Nugget
@@ -24,6 +25,13 @@ item.steel_nugget.name=Steel Nugget
 
 item.brick_mold.name=Brick Mold
 item.unfired_clay_brick.name=Unfired Clay Brick
+item.unfired_coke_oven_brick.name=Unfired Coke Oven Brick
+item.coke_oven_brick.name=Coke Oven Brick
+
+item.coal_coke.name=Coal Coke
+
+item.coke_dust.name=Coke Dust
+item.coke_compound.name=Coke Compound
 
 tile.copper_ore.name=Copper Ore
 tile.tin_ore.name=Tin Ore
@@ -35,6 +43,8 @@ tile.silver_block.name=Block of Silver
 tile.lead_ore.name=Lead Ore
 tile.lead_block.name=Block of Lead
 tile.steel_block.name=Block of Steel
+
+tile.coke_oven_bricks.name=Coke Oven Bricks
 
 tooltip.recrafted.copper_pickaxe=A tool made of copper, slightly cheaper than an iron pickaxe.
 tooltip.recrafted.copper_axe=A copper axe. Cheaper than iron, but it wears out sooner.

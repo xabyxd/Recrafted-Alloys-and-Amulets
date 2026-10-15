@@ -4,11 +4,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraftforge.oredict.OreDictionary;
 import net.xabyxd.recrafted.blocks.BronzeBlock;
+import net.xabyxd.recrafted.blocks.CokeOvenBricks;
 import net.xabyxd.recrafted.blocks.CopperBlock;
 import net.xabyxd.recrafted.blocks.LeadBlock;
 import net.xabyxd.recrafted.blocks.SilverBlock;
 import net.xabyxd.recrafted.blocks.SteelBlock;
 import net.xabyxd.recrafted.blocks.TinBlock;
+import net.xabyxd.recrafted.blocks.machines.CokeOvenController;
 import net.xabyxd.recrafted.blocks.ores.CopperOre;
 import net.xabyxd.recrafted.blocks.ores.LeadOre;
 import net.xabyxd.recrafted.blocks.ores.SilverOre;
@@ -28,6 +30,9 @@ public class RecraftedBlocks {
     public static Block steelBlock;
     public static Block bronzeBlock;
 
+    public static Block cokeOvenBricks;
+    public static Block cokeOvenController;
+
     public static void init() {
         // Block builder
         copperOre = new CopperOre();
@@ -42,6 +47,9 @@ public class RecraftedBlocks {
         steelBlock = new SteelBlock();
         bronzeBlock = new BronzeBlock();
 
+        cokeOvenBricks = new CokeOvenBricks();
+        cokeOvenController = new CokeOvenController();
+
         // Block registration
         GameRegistry.registerBlock(copperOre, "copper_ore");
         GameRegistry.registerBlock(tinOre, "tin_ore");
@@ -53,6 +61,9 @@ public class RecraftedBlocks {
         GameRegistry.registerBlock(leadBlock, "lead_block");
         GameRegistry.registerBlock(steelBlock, "steel_block");
         GameRegistry.registerBlock(bronzeBlock, "bronze_block");
+
+        GameRegistry.registerBlock(cokeOvenBricks, "coke_oven_bricks");
+        GameRegistry.registerBlock(cokeOvenController, "coke_oven_controller");
 
         // Ore dictionary (after registering)
         // Ores:

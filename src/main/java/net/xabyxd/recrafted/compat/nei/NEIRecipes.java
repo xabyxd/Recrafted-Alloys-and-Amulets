@@ -72,14 +72,19 @@ public final class NEIRecipes {
         // Unfired clay brick -> brick
         addSmelting(RecraftedItems.unfiredClayBrick, new ItemStack(Items.brick));
 
+        // addSmeltingBlock(RecraftedBlocks.copperOre, new ItemStack(RecraftedItems.copperIngot));
+        // addSmeltingBlock(RecraftedBlocks.tinOre, new ItemStack(RecraftedItems.tinIngot));
+        // addSmeltingBlock(RecraftedBlocks.silverOre, new ItemStack(RecraftedItems.silverIngot));
+        // addSmeltingBlock(RecraftedBlocks.leadOre, new ItemStack(RecraftedItems.leadIngot));
+
         // TODO: Future custom recipe handler for custom machines from Recrafted
 
         // Crafting table: vanilla stone tools are no longer craftable (TESTING)
-        hideCraftingOutput(Items.stone_pickaxe);
-        hideCraftingOutput(Items.stone_axe);
-        hideCraftingOutput(Items.stone_hoe);
-        hideCraftingOutput(Items.stone_shovel);
-        hideCraftingOutput(Items.stone_sword);
+        // hideCraftingOutput(Items.stone_pickaxe);
+        // hideCraftingOutput(Items.stone_axe);
+        // hideCraftingOutput(Items.stone_hoe);
+        // hideCraftingOutput(Items.stone_shovel);
+        // hideCraftingOutput(Items.stone_sword);
 
         // More examples:
         // hideSmeltingInput(Items.porkchop);

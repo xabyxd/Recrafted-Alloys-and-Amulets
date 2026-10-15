@@ -15,6 +15,7 @@ item.silver_ingot.name=Lingote de Plata
 item.lead_ingot.name=Lingote de Plomo
 item.steel_ingot.name=Lingote de Acero
 
+item.iron_nugget.name=Pepita de Hierro
 item.copper_nugget.name=Pepita de Cobre
 item.tin_nugget.name=Pepita de Estaño
 item.bronze_nugget.name=Pepita de Bronce
@@ -24,6 +25,13 @@ item.steel_nugget.name=Pepita de Acero
 
 item.brick_mold.name=Molde de Ladrillos
 item.unfired_clay_brick.name=Ladrillo sin Cocinar
+item.unfired_coke_oven_brick.name=Ladrillo de Horno de Coque sin Cocinar
+item.coke_oven_brick.name=Ladrillo de Horno de Coque
+
+item.coal_coke.name=Carbón de Coque
+
+item.coke_dust.name=Polvo de Coque
+item.coke_compound.name=Compuesto de Coque
 
 tile.copper_ore.name=Mena de Cobre
 tile.tin_ore.name=Mena de Estaño
@@ -35,6 +43,8 @@ tile.silver_block.name=Bloque de Plata
 tile.lead_ore.name=Mena de Plomo
 tile.lead_block.name=Bloque de Plomo
 tile.steel_block.name=Bloque de Acero
+
+tile.coke_oven_bricks.name=Ladrillos de Horno de Coque
 
 tooltip.recrafted.copper_pickaxe=Una herramienta de cobre, algo más barata que un pico de hierro.
 tooltip.recrafted.copper_axe=Un hacha de cobre. Más barata que el hierro, pero se desgasta antes.
