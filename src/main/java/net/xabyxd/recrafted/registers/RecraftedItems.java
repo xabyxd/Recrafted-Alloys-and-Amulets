@@ -22,6 +22,7 @@ import net.xabyxd.recrafted.items.nuggets.LeadNugget;
 import net.xabyxd.recrafted.items.nuggets.SilverNugget;
 import net.xabyxd.recrafted.items.nuggets.SteelNugget;
 import net.xabyxd.recrafted.items.nuggets.TinNugget;
+import net.xabyxd.recrafted.items.tools.IronMortar;
 import net.xabyxd.recrafted.items.tools.copper.CopperAxe;
 import net.xabyxd.recrafted.items.tools.copper.CopperHoe;
 import net.xabyxd.recrafted.items.tools.copper.CopperPickaxe;
@@ -62,6 +63,7 @@ public class RecraftedItems {
     public static Item copperHoe;
 
     // Item registration
+    public static Item ironMortar;
     public static Item brickMold;
     public static Item unfiredClayBrick;
     public static Item unfiredCokeOvenBrick;
@@ -105,6 +107,7 @@ public class RecraftedItems {
         unfiredCokeOvenBrick = new UnfiredCokeOvenBrick();
         cokeOvenBrick = new CokeOvenBrick();
         coalCoke = new CoalCoke();
+        ironMortar = new IronMortar();
 
         // Tool registration
         GameRegistry.registerItem(copperPickaxe, "copper_pickaxe");
@@ -136,6 +139,7 @@ public class RecraftedItems {
         GameRegistry.registerItem(unfiredCokeOvenBrick, "unfired_coke_oven_brick");
         GameRegistry.registerItem(cokeOvenBrick, "coke_oven_brick");
         GameRegistry.registerItem(coalCoke, "coal_coke");
+        GameRegistry.registerItem(ironMortar, "iron_mortar");
 
         // Ore dictionary registration
         OreDictionary.registerOre("ingotCopper", copperIngot);

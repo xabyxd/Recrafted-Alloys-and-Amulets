@@ -27,6 +27,7 @@ item.brick_mold.name=Molde de Ladrillos
 item.unfired_clay_brick.name=Ladrillo sin Cocinar
 item.unfired_coke_oven_brick.name=Ladrillo de Horno de Coque sin Cocinar
 item.coke_oven_brick.name=Ladrillo de Horno de Coque
+item.iron_mortar.name=Mortero de Hierro
 
 item.coal_coke.name=Carbón de Coque
 

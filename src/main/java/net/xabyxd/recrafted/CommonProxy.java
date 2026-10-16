@@ -28,8 +28,8 @@ public class CommonProxy {
         Compat.init();
         Config.synchronizeConfiguration();
         RecraftedItems.init();
-        MagicRecraftedItems.init();
         RecraftedBlocks.init();
+        MagicRecraftedItems.init();
         LogHelper.info(Recrafted.MOD_NAME + " version " + Recrafted.VERSION + " loaded");
         LogHelper.info("Pre-initialization completed");
     }
