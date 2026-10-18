@@ -28,8 +28,12 @@ plugins {
 // Repositories for the project dependencies (the ones in buildscript{} only serve the Gradle plugin).
 // If buildscript/forge-1.7.gradle already declares them, these are harmless duplicates.
 repositories {
-    maven { url = "https://jitpack.io" }
-    maven { url = "https://nexus.gtnewhorizons.com/repository/public/" }
+    maven {
+        url = "https://jitpack.io"
+    }
+    maven {
+        url = "https://nexus.gtnewhorizons.com/repository/public/"
+    }
 }
 
 if (project.enable_lombok.toBoolean()) {
@@ -45,6 +49,9 @@ dependencies {
         transitive = false
     }
     compileOnly 'com.github.GTNewHorizons:CodeChickenCore:1.4.21:dev'
+    compileOnly('com.github.GTNewHorizons:waila:1.19.34:dev') {
+        transitive = false
+    }
 }
 
 apply from: "buildscript/forge-1.7.gradle"

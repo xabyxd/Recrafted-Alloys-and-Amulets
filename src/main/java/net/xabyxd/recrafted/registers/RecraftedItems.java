@@ -9,6 +9,9 @@ import net.xabyxd.recrafted.items.bricks.CokeOvenBrick;
 import net.xabyxd.recrafted.items.bricks.UnfiredClayBrick;
 import net.xabyxd.recrafted.items.bricks.UnfiredCokeOvenBrick;
 import net.xabyxd.recrafted.items.fuels.CoalCoke;
+import net.xabyxd.recrafted.items.gems.PeridotGem;
+import net.xabyxd.recrafted.items.gems.RubyGem;
+import net.xabyxd.recrafted.items.gems.SapphireGem;
 import net.xabyxd.recrafted.items.ingots.BronzeIngot;
 import net.xabyxd.recrafted.items.ingots.CopperIngot;
 import net.xabyxd.recrafted.items.ingots.LeadIngot;
@@ -37,6 +40,9 @@ public class RecraftedItems {
     public static ToolMaterial TIN;
     public static ToolMaterial BRONZE;
     public static ToolMaterial SILVER;
+    public static ToolMaterial RUBY;
+    public static ToolMaterial SAPPHIRE;
+    public static ToolMaterial PERIDOT;
 
     // Ingot registration
     public static Item copperIngot;
@@ -45,6 +51,11 @@ public class RecraftedItems {
     public static Item silverIngot;
     public static Item leadIngot;
     public static Item steelIngot;
+
+    // Gem registration
+    public static Item rubyGem;
+    public static Item sapphireGem;
+    public static Item peridotGem;
 
     // Nugget registration
     public static Item ironNugget;
@@ -76,6 +87,10 @@ public class RecraftedItems {
         TIN = EnumHelper.addToolMaterial("TIN", 2, 132, 3.7F, 1.1F, 8);
         BRONZE = EnumHelper.addToolMaterial("BRONZE", 2, 390, 6.0F, 1.9F, 8);
         SILVER = EnumHelper.addToolMaterial("SILVER", 2, 200, 5.3F, 2.7F, 8);
+        // Gems materials needs to be adjusted...
+        RUBY = EnumHelper.addToolMaterial("RUBY", 2, 250, 5.0F, 1.5F, 8);
+        SAPPHIRE = EnumHelper.addToolMaterial("SAPPHIRE", 2, 250, 5.0F, 1.5F, 8);
+        PERIDOT = EnumHelper.addToolMaterial("PERIDOT", 2, 250, 5.0F, 1.5F, 8);
 
         // Tool builder
         copperPickaxe = new CopperPickaxe(COPPER);
@@ -91,6 +106,11 @@ public class RecraftedItems {
         silverIngot = new SilverIngot();
         leadIngot = new LeadIngot();
         steelIngot = new SteelIngot();
+
+        // Gems builder
+        rubyGem = new RubyGem();
+        sapphireGem = new SapphireGem();
+        peridotGem = new PeridotGem();
 
         // Nuggets builder
         ironNugget = new IronNugget();
@@ -124,6 +144,11 @@ public class RecraftedItems {
         GameRegistry.registerItem(leadIngot, "lead_ingot");
         GameRegistry.registerItem(steelIngot, "steel_ingot");
 
+        // Gem registration
+        GameRegistry.registerItem(rubyGem, "ruby_gem");
+        GameRegistry.registerItem(sapphireGem, "sapphire_gem");
+        GameRegistry.registerItem(peridotGem, "peridot_gem");
+
         // Nugget registration
         GameRegistry.registerItem(ironNugget, "iron_nugget");
         GameRegistry.registerItem(copperNugget, "copper_nugget");
@@ -148,6 +173,9 @@ public class RecraftedItems {
         OreDictionary.registerOre("ingotSilver", silverIngot);
         OreDictionary.registerOre("ingotLead", leadIngot);
         OreDictionary.registerOre("ingotSteel", steelIngot);
+        OreDictionary.registerOre("gemRuby", rubyGem);
+        OreDictionary.registerOre("gemSapphire", sapphireGem);
+        OreDictionary.registerOre("gemPeridot", peridotGem);
 
         OreDictionary.registerOre("nuggetIron", ironNugget);
         OreDictionary.registerOre("nuggetCopper", copperNugget);

@@ -7,6 +7,7 @@ item.copper_hoe.name=Azada de Cobre
 
 item.vigor_amulet.name=Amuleto de Vigor
 item.miner_amulet.name=Amuleto del Minero
+item.speed_amulet.name=Amuleto de Velocidad
 
 item.copper_ingot.name=Lingote de Cobre
 item.tin_ingot.name=Lingote de Estaño
@@ -14,6 +15,10 @@ item.bronze_ingot.name=Lingote de Bronce
 item.silver_ingot.name=Lingote de Plata
 item.lead_ingot.name=Lingote de Plomo
 item.steel_ingot.name=Lingote de Acero
+
+item.ruby_gem.name=Gema de Rubí
+item.sapphire_gem.name=Gema de Zafiro
+item.peridot_gem.name=Gema de Perdigon
 
 item.iron_nugget.name=Pepita de Hierro
 item.copper_nugget.name=Pepita de Cobre
@@ -44,8 +49,13 @@ tile.silver_block.name=Bloque de Plata
 tile.lead_ore.name=Mena de Plomo
 tile.lead_block.name=Bloque de Plomo
 tile.steel_block.name=Bloque de Acero
+tile.ruby_ore.name=Mena de Rubí
+tile.sapphire_ore.name=Mena de Zafiro
+tile.peridot_ore.name=Mena de Perdigon
 
 tile.coke_oven_bricks.name=Ladrillos de Horno de Coque
+tile.coke_oven_controller.name=Controlador de Horno de Coque
+tile.coal_coke_block.name=Bloque de Carbón de Coque
 
 tooltip.recrafted.copper_pickaxe=Una herramienta de cobre, algo más barata que un pico de hierro.
 tooltip.recrafted.copper_axe=Un hacha de cobre. Más barata que el hierro, pero se desgasta antes.
@@ -67,3 +77,9 @@ tooltip.recrafted.peridot_gem=Una gema verde. Ligera en la mano y rápida de tra
 
 tooltip.recrafted.brick_mold=Se usa para dar forma de ladrillo a la arcilla.
 tooltip.recrafted.unfired_clay_brick=Arcilla moldeada, todavía blanda. Hay que cocerla en un horno.
+
+chat.recrafted.coke_oven_controller.message=El controlador del horno de coque aún no tiene utilidad, pero se enciende 3 segundos.
+
+waila.recrafted.state=Estado
+waila.recrafted.active=Activo
+waila.recrafted.inactive=Inactivo

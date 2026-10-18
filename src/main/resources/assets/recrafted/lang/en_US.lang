@@ -7,6 +7,7 @@ item.copper_hoe.name=Copper Hoe
 
 item.vigor_amulet.name=Vigor Amulet
 item.miner_amulet.name=Miner Amulet
+item.speed_amulet.name=Speed Amulet
 
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
@@ -14,6 +15,10 @@ item.bronze_ingot.name=Bronze Ingot
 item.silver_ingot.name=Silver Ingot
 item.lead_ingot.name=Lead Ingot
 item.steel_ingot.name=Steel Ingot
+
+item.ruby_gem.name=Ruby Gem
+item.sapphire_gem.name=Sapphire Gem
+item.peridot_gem.name=Peridot Gem
 
 item.iron_nugget.name=Iron Nugget
 item.copper_nugget.name=Copper Nugget
@@ -44,8 +49,13 @@ tile.silver_block.name=Block of Silver
 tile.lead_ore.name=Lead Ore
 tile.lead_block.name=Block of Lead
 tile.steel_block.name=Block of Steel
+tile.ruby_ore.name=Ruby Ore
+tile.sapphire_ore.name=Sapphire Ore
+tile.peridot_ore.name=Peridot Ore
 
 tile.coke_oven_bricks.name=Coke Oven Bricks
+tile.coke_oven_controller.name=Coke Oven Controller
+tile.coal_coke_block.name=Block of Coal Coke
 
 tooltip.recrafted.copper_pickaxe=A tool made of copper, slightly cheaper than an iron pickaxe.
 tooltip.recrafted.copper_axe=A copper axe. Cheaper than iron, but it wears out sooner.
@@ -67,3 +77,9 @@ tooltip.recrafted.peridot_gem=A green gem. Light in the hand and quick to work.
 
 tooltip.recrafted.brick_mold=Used to shape clay into bricks.
 tooltip.recrafted.unfired_clay_brick=Shaped clay, still soft. Needs to be fired in a furnace.
+
+chat.recrafted.coke_oven_controller.message=The coke oven controller has no use yet, but it lights up for 3 seconds.
+
+waila.recrafted.state=State
+waila.recrafted.active=Active
+waila.recrafted.inactive=Inactive

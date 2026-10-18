@@ -8,8 +8,20 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class RecipesRegister {
-    
+
     public static void RecipesInit() {
+        registerToolRecipes();
+        registerBrickRecipes();
+        registerSmeltingRecipes();
+        registerBlockRecipes();
+        registerMaterialRecipes();
+    }
+
+    // ---------------------------------------------------------------------
+    // Tools
+    // ---------------------------------------------------------------------
+
+    private static void registerToolRecipes() {
         // Copper Pickaxe
         GameRegistry.addRecipe(new ShapedOreRecipe(
             new ItemStack(RecraftedItems.copperPickaxe),
@@ -59,7 +71,13 @@ public class RecipesRegister {
             'C', "ingotCopper",
             'S', "stickWood")
         );
+    }
 
+    // ---------------------------------------------------------------------
+    // Bricks
+    // ---------------------------------------------------------------------
+
+    private static void registerBrickRecipes() {
         // Brick Mold
         GameRegistry.addRecipe(new ShapedOreRecipe(
             new ItemStack(RecraftedItems.brickMold),
@@ -86,7 +104,13 @@ public class RecipesRegister {
             new ItemStack(RecraftedItems.brickMold, 1, OreDictionary.WILDCARD_VALUE),
             Items.clay_ball
         ));
+    }
 
+    // ---------------------------------------------------------------------
+    // Smelting
+    // ---------------------------------------------------------------------
+
+    private static void registerSmeltingRecipes() {
         // Registered in NEIRecipes.defineAll() too
         // Unfired Clay Brick -> x1 Brick
         GameRegistry.addSmelting(RecraftedItems.unfiredClayBrick, new ItemStack(Items.brick), 0.7F);
@@ -102,7 +126,13 @@ public class RecipesRegister {
 
         // Lead Ore -> Lead Ingot
         GameRegistry.addSmelting(RecraftedBlocks.leadOre, new ItemStack(RecraftedItems.leadIngot), 0.7F);
+    }
 
+    // ---------------------------------------------------------------------
+    // Blocks
+    // ---------------------------------------------------------------------
+
+    private static void registerBlockRecipes() {
         // Copper Block
         GameRegistry.addRecipe(new ShapedOreRecipe(
             new ItemStack(RecraftedBlocks.copperBlock),
@@ -156,7 +186,13 @@ public class RecipesRegister {
             "SSS",
             'S', "ingotSteel")
         );
+    }
 
+    // ---------------------------------------------------------------------
+    // Materials
+    // ---------------------------------------------------------------------
+
+    private static void registerMaterialRecipes() {
         // x3 Copper Ingot + x1 Tin Ingot = x4 Bronze Ingot
         GameRegistry.addRecipe(new ShapelessOreRecipe(
             new ItemStack(RecraftedItems.bronzeIngot, 4),
