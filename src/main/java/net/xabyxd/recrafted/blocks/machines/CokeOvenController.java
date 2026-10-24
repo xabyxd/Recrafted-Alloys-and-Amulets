@@ -7,20 +7,23 @@ import java.util.Random;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.xabyxd.recrafted.Recrafted;
+import net.xabyxd.recrafted.gui.GuiHandler;
+import net.xabyxd.recrafted.tileentity.TileEntityCokeOven;
 
-public class CokeOvenController extends Block {
+public class CokeOvenController extends BlockContainer {
     
     @SideOnly(Side.CLIENT)
     private IIcon iconSide;
@@ -37,6 +40,10 @@ public class CokeOvenController extends Block {
         setResistance(10.0F);
         setStepSound(soundTypeMetal);
         setHarvestLevel("pickaxe", 1);
+    }
+
+    @Override public TileEntity createNewTileEntity(World w, int meta) {
+        return new TileEntityCokeOven();
     }
 
     @Override
@@ -76,21 +83,24 @@ public class CokeOvenController extends Block {
     }
 
     @Override
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-        if (world.isRemote) return true; // Only the server controls the logic
-
-        ChatComponentText prefix = new ChatComponentText("[INFO] ");
-        prefix.getChatStyle().setColor(EnumChatFormatting.YELLOW);
-
-        ChatComponentText message = new ChatComponentText("");
-        message.appendSibling(prefix);
-        message.appendSibling(new ChatComponentTranslation("chat.recrafted.coke_oven_controller.message"));
-
-        player.addChatMessage(message);
-
-        setActive(world, x, y, z, true);
-        world.scheduleBlockUpdate(x, y, z, this, 200); // 200 ticks = 10 seconds
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hx, float hy, float hz) {
+        if (!world.isRemote) {
+            player.openGui(Recrafted.instance, GuiHandler.COKE_OVEN, world, x, y, z);
+        }
         return true;
+    }
+
+    @Override
+    public void breakBlock(World w, int x, int y, int z, Block b, int meta) {
+        TileEntity te = w.getTileEntity(x, y, z);
+        if (te instanceof TileEntityCokeOven) {
+            IInventory inv = (IInventory) te;
+            for (int i = 0; i < inv.getSizeInventory(); i++) {
+                ItemStack s = inv.getStackInSlot(i);
+                if (s != null) w.spawnEntityInWorld(new EntityItem(w, x + 0.5, y + 0.5, z + 0.5, s));
+            }
+        }
+        super.breakBlock(w, x, y, z, b, meta);
     }
 
     @Override

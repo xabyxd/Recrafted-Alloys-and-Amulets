@@ -63,8 +63,9 @@ tooltip.recrafted.copper_sword=Una espada de cobre. Corta bien, pero no aguanta 
 tooltip.recrafted.copper_shovel=Una pala de cobre. Cava rápido, pero se desgasta antes que el hierro.
 tooltip.recrafted.copper_hoe=Una azada de cobre. Suficiente para labrar la tierra.
 
-tooltip.recrafted.vigor_amulet=
-tooltip.recrafted.miner_amulet=
+tooltip.recrafted.vigor_amulet=Da un bonus de salud al portador.
+tooltip.recrafted.miner_amulet=Da un bonus de velocidad de minería al portador.
+tooltip.recrafted.speed_amulet=Da un bonus de velocidad al portador.
 
 tooltip.recrafted.copper_ingot=Un metal blando y rojizo. Útil para herramientas y aleaciones.
 tooltip.recrafted.tin_ingot=Un metal blando y plateado. Rara vez se usa solo, pero es esencial para el bronce.
@@ -77,9 +78,15 @@ tooltip.recrafted.peridot_gem=Una gema verde. Ligera en la mano y rápida de tra
 
 tooltip.recrafted.brick_mold=Se usa para dar forma de ladrillo a la arcilla.
 tooltip.recrafted.unfired_clay_brick=Arcilla moldeada, todavía blanda. Hay que cocerla en un horno.
+tooltip.recrafted.iron_mortar=Un mortero de hierro. Se puede usar para triturar materiales.
 
 chat.recrafted.coke_oven_controller.message=El controlador del horno de coque aún no tiene utilidad, pero se enciende 3 segundos.
+
+container.recrafted.coke_oven=Horno de coque
 
 waila.recrafted.state=Estado
 waila.recrafted.active=Activo
 waila.recrafted.inactive=Inactivo
+
+nei.recrafted.coke_oven=Horno de coque
+nei.recrafted.coke_oven.time=%d s

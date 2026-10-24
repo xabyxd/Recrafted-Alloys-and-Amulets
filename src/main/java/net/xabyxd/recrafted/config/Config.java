@@ -12,8 +12,6 @@ public class Config {
 
     public static final String CATEGORY_WORLDGEN = "worldgen";
 
-    public static String ConfigTest = "Config test.";
-
     // World generation
     public static boolean EnableOreGen = true;
     public static boolean IgnoreIC2Check = false;
@@ -27,13 +25,6 @@ public class Config {
             configFile.getParentFile().mkdirs();
         }
         Configuration configuration = new Configuration(configFile);
-
-        ConfigTest = configuration.getString(
-            "ConfigTest",
-            Configuration.CATEGORY_GENERAL,
-            ConfigTest,
-            "How shall I greet?"
-        );
 
         EnableOreGen = configuration.getBoolean(
             "EnableOreGen",

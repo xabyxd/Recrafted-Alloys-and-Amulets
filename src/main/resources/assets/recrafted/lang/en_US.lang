@@ -63,8 +63,9 @@ tooltip.recrafted.copper_sword=A copper sword. Cuts well, but doesn't hold up li
 tooltip.recrafted.copper_shovel=A copper shovel. Digs fast, but wears out sooner than iron.
 tooltip.recrafted.copper_hoe=A copper hoe. Good enough for tilling soil.
 
-tooltip.recrafted.vigor_amulet=
-tooltip.recrafted.miner_amulet=
+tooltip.recrafted.vigor_amulet=Gives the wearer a health boost.
+tooltip.recrafted.miner_amulet=Gives the wearer a boost in mining speed.
+tooltip.recrafted.speed_amulet=Gives the wearer a boost in movement speed.
 
 tooltip.recrafted.copper_ingot=A soft, reddish metal. Useful for tools and alloys.
 tooltip.recrafted.tin_ingot=A soft, silvery metal. Rarely used alone, but essential for bronze.
@@ -77,9 +78,15 @@ tooltip.recrafted.peridot_gem=A green gem. Light in the hand and quick to work.
 
 tooltip.recrafted.brick_mold=Used to shape clay into bricks.
 tooltip.recrafted.unfired_clay_brick=Shaped clay, still soft. Needs to be fired in a furnace.
+tooltip.recrafted.iron_mortar=An iron mortar. Can be used to crush materials.
 
 chat.recrafted.coke_oven_controller.message=The coke oven controller has no use yet, but it lights up for 3 seconds.
+
+container.recrafted.coke_oven=Coke Oven
 
 waila.recrafted.state=State
 waila.recrafted.active=Active
 waila.recrafted.inactive=Inactive
+
+nei.recrafted.coke_oven=Coke Oven
+nei.recrafted.coke_oven.time=%d s

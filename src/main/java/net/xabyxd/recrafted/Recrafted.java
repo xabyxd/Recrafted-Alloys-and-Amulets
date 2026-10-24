@@ -2,6 +2,7 @@ package net.xabyxd.recrafted;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -27,6 +28,9 @@ public class Recrafted {
     public static final String MOD_NAME = "Recrafted: Alloys & Amulets";
     public static final String SHORT_MOD_NAME = "Recrafted";
     public static final String VERSION = "@VERSION@";
+
+    @Instance
+    public static Recrafted instance;
 
     @SidedProxy(
         clientSide = "net.xabyxd.recrafted.ClientProxy",

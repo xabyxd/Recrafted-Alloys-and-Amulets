@@ -17,7 +17,7 @@ public class BrickMold extends Item {
         setTextureName(Recrafted.MODID + ":brick_mold");
         setCreativeTab(RecraftedTAB);
         setMaxStackSize(1);
-        setMaxDamage(63);
+        setMaxDamage(127);
     }
 
     @Override

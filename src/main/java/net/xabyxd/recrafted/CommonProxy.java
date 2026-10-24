@@ -16,7 +16,10 @@ import net.xabyxd.recrafted.registers.RecipesRegister;
 import net.xabyxd.recrafted.registers.RecipesRemover;
 import net.xabyxd.recrafted.registers.RecraftedBlocks;
 import net.xabyxd.recrafted.registers.RecraftedFuelHandler;
+import net.xabyxd.recrafted.registers.RecraftedGuis;
 import net.xabyxd.recrafted.registers.RecraftedItems;
+import net.xabyxd.recrafted.registers.RecraftedTileEntities;
+import net.xabyxd.recrafted.registers.recipes.CokeOvenRecipes;
 import net.xabyxd.recrafted.utils.LogHelper;
 import net.xabyxd.recrafted.world.OreGenerator;
 
@@ -36,12 +39,15 @@ public class CommonProxy {
         RecraftedBlocks.init();
         MagicRecraftedItems.init();
 
+        CokeOvenRecipes.init();
+
         LogHelper.info("Pre-initialization completed");
     }
 
     // init: recipes, fuels, world generation, inter-mod communication.
     public void init(FMLInitializationEvent event) {
         registerFuels();
+        registerGuiHandler();
         registerWailaCompat();
 
         RecipesRegister.RecipesInit();
@@ -69,6 +75,14 @@ public class CommonProxy {
             )
         );
         LogHelper.info("Fuel handler registered");
+    }
+
+    private void registerGuiHandler() {
+        RecraftedTileEntities.init();
+        RecraftedGuis.init();
+
+        LogHelper.info("Tile Entities registered");
+        LogHelper.info("GUI handler registered");
     }
 
     private void registerWailaCompat() {
