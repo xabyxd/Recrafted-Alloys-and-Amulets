@@ -87,6 +87,7 @@ container.recrafted.coke_oven=Horno de coque
 waila.recrafted.state=Estado
 waila.recrafted.active=Activo
 waila.recrafted.inactive=Inactivo
+waila.recrafted.invalid_structure=Estructura no válida
 
 nei.recrafted.coke_oven=Horno de coque
 nei.recrafted.coke_oven.time=%d s

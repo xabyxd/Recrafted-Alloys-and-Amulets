@@ -87,6 +87,7 @@ container.recrafted.coke_oven=Coke Oven
 waila.recrafted.state=State
 waila.recrafted.active=Active
 waila.recrafted.inactive=Inactive
+waila.recrafted.invalid_structure=Invalid Structure
 
 nei.recrafted.coke_oven=Coke Oven
 nei.recrafted.coke_oven.time=%d s

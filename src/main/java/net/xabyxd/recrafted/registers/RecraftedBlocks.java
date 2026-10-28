@@ -11,6 +11,7 @@ import net.xabyxd.recrafted.blocks.LeadBlock;
 import net.xabyxd.recrafted.blocks.SilverBlock;
 import net.xabyxd.recrafted.blocks.SteelBlock;
 import net.xabyxd.recrafted.blocks.TinBlock;
+import net.xabyxd.recrafted.blocks.machines.BlastFurnaceController;
 import net.xabyxd.recrafted.blocks.machines.CokeOvenController;
 import net.xabyxd.recrafted.blocks.ores.CopperOre;
 import net.xabyxd.recrafted.blocks.ores.LeadOre;
@@ -38,6 +39,7 @@ public class RecraftedBlocks {
     public static Block bronzeBlock;
 
     public static Block cokeOvenBricks;
+    public static Block blastFurnaceController;
     public static Block cokeOvenController;
     public static Block coalCokeBlock;
 
@@ -59,6 +61,7 @@ public class RecraftedBlocks {
         bronzeBlock = new BronzeBlock();
 
         cokeOvenBricks = new CokeOvenBricks();
+        blastFurnaceController = new BlastFurnaceController();
         cokeOvenController = new CokeOvenController();
         coalCokeBlock = new CoalCokeBlock();
 
@@ -79,6 +82,7 @@ public class RecraftedBlocks {
 
         GameRegistry.registerBlock(cokeOvenBricks, "coke_oven_bricks");
         GameRegistry.registerBlock(cokeOvenController, "coke_oven_controller");
+        GameRegistry.registerBlock(blastFurnaceController, "blast_furnace_controller");
         GameRegistry.registerBlock(coalCokeBlock, "coal_coke_block");
 
         // Ore dictionary (after registering)

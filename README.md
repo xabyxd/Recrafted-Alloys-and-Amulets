@@ -6,10 +6,12 @@ _A lightweight early/mid-game tech mod for Minecraft 1.7.10. Alloy tools, fuel-p
 
 _Download the mod from [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/recrafted-alloys-amulets)._
 
+_Not published on Modrinth yet (they are really slow to review mods...)._
+
 ![Minecraft 1.7.10](https://img.shields.io/badge/Minecraft-1.7.10-green) ![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-orange) ![Status](https://img.shields.io/badge/Status-Work%20in%20Progress-yellow)
 ***
 
-> ⚠️ **Work in progress.** Content is added gradually and things may change or break between versions.
+> ⚠️ **Work in progress.** Content is added gradually and things may change and/or break between versions.
 
 ## ✨ Features
 
@@ -20,13 +22,15 @@ _Download the mod from [CurseForge](https://legacy.curseforge.com/minecraft/mc-m
 
 ## 🔌 Compatibility
 
-| Mod               |Status                     |
-| ----------------- |-------------------------- |
-| Baubles           |🛠️ Planned (amulet slots) |
-| Thaumcraft        |🛠️ Planned                |
-| IndustrialCraft 2 |🛠️ Planned                |
-| NotEnoughItems    |🛠️ Planned                |
-| Waila             |🛠️ Planned                |
+| Mod               |Status                            |
+| ----------------- |--------------------------        |
+| Baubles           |🛠️ Planned (amulet slots)         |
+| Thaumcraft        |🛠️ Planned (magic items)          |
+| IndustrialCraft 2 |🛠️ Partial (electricity planned)  |
+| NotEnoughItems    |🧪 Testing (implemented)          |
+| Waila             |🧪 Testing (implemented)          |
+
+You can also provide feedback and/or ideas for integrations in the [Issues](https://github.com/xabyxd/Recrafted-Alloys-and-Amulets/issues) page.
 
 More integrations may come in the future.
 
