@@ -11,6 +11,7 @@ public class Config {
     public static File configFile = new File(configDir, Recrafted.MODID + ".cfg");
 
     public static final String CATEGORY_WORLDGEN = "worldgen";
+    public static final String CATEGORY_GUI_ELEMENTS = "GUI_Elements";
 
     // World generation
     public static boolean EnableOreGen = true;
@@ -20,11 +21,29 @@ public class Config {
     public static boolean GenerateSilverOre = true;
     public static boolean GenerateLeadOre = true;
 
+    // GUI Elements
+    public static boolean EnablePauseMenuElement = true;
+    public static boolean EnableCompatMenu = true;
+
     public static void synchronizeConfiguration() {
         if (!configFile.getParentFile().exists()) {
             configFile.getParentFile().mkdirs();
         }
         Configuration configuration = new Configuration(configFile);
+
+        EnablePauseMenuElement = configuration.getBoolean(
+            "RecraftedPauseMenuGUI",
+            CATEGORY_GUI_ELEMENTS,
+            EnablePauseMenuElement,
+            "Controls whether the Recrafted logo and buttons are shown in the pause menu."
+        );
+
+        EnableCompatMenu = configuration.getBoolean(
+            "CompatMenu",
+            CATEGORY_GUI_ELEMENTS,
+            EnableCompatMenu,
+            "Controls of the Recrafted compatibility menu"
+        );
 
         EnableOreGen = configuration.getBoolean(
             "EnableOreGen",

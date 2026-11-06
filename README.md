@@ -1,4 +1,3 @@
-![Recrafted Logo](https://raw.githubusercontent.com/xabyxd/Recrafted-Alloys-and-Amulets/refs/heads/master/media/recrafted-logo.png)
 
 # Recrafted: Alloys and Amulets
 
@@ -7,6 +6,8 @@ _A lightweight early/mid-game tech mod for Minecraft 1.7.10. Alloy tools, fuel-p
 _Download the mod from [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/recrafted-alloys-amulets)._
 
 _Not published on Modrinth yet (they are really slow to review mods...)._
+
+![Recrafted Logo](https://raw.githubusercontent.com/xabyxd/Recrafted-Alloys-and-Amulets/refs/heads/master/media/recrafted-logo.png)
 
 ![Minecraft 1.7.10](https://img.shields.io/badge/Minecraft-1.7.10-green) ![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-orange) ![Status](https://img.shields.io/badge/Status-Work%20in%20Progress-yellow)
 ***
